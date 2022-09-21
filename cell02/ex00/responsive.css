@@ -1,0 +1,18 @@
+table,
+tr {
+  width: 100%;
+  height: 100vh;
+  border-collapse: collapse;
+}
+td {
+  width: 50%;
+  border: solid 1px black;
+}
+.cell1 {
+  color: rgb(230, 207, 178);
+  background-color: rgb(86, 52, 59);
+}
+.cell2 {
+  color: rgb(67, 65, 60);
+  background-color: rgb(195, 194, 191);
+}

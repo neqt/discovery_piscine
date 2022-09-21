@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calc</title>
+    <script>
+      setInterval(function () {
+        alert("Please, use me...");
+      }, 30000);
+
+      function calculate() {
+        const num1 = document.getElementById("num1").value;
+        const num2 = document.getElementById("num2").value;
+        const operators = document.getElementById("operators").value;
+
+        if (num1 >= 0 && num2 >= 0) {
+          let ans = eval(num1 + operators + num2);
+          alert(ans);
+          console.log(ans);
+        } else {
+          alert("Error :(");
+        }
+
+        if ((operators == "/" || operators == "%") && num2 == "0") {
+          console.log("It’s over 9000!");
+          alert("It’s over 9000!");
+        } else {
+          console.log(ans);
+          alert(ans);
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="num1" required />
+    <select id="operators">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="*">*</option>
+      <option value="/">/</option>
+      <option value="%">%</option>
+    </select>
+    <input type="text" id="num2" required />
+    <input type="submit" onclick="calculate()" value="Try me!" />
+  </body>
+</html>

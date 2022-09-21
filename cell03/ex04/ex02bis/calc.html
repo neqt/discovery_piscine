@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>calc</title>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.js"
+      integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      let run;
+      let result;
+      op = "+";
+
+      $("document").ready(() => {
+        setInterval(function () {
+          alert30();
+        }, 30000);
+
+        function alert30() {
+          console.log("Please, use me...");
+          alert("Please, use me...");
+        }
+
+        $("#button").click(() => {
+          var x = +$("#left").val();
+          var y = +$("#right").val();
+          const op = $("#select option:selected").text();
+
+          if (x >= 0 && y >= 0) {
+            if (y == 0 && (op == "/" || op == "%")) {
+              console.log("It’s over 9000!");
+              alert("It’s over 9000!");
+            } else if (op == "-") {
+              result = x - y;
+              console.log(result);
+              alert(result);
+            } else if (op == "+") {
+              result = x + y;
+              console.log(result);
+              alert(result);
+            } else if (op == "*") {
+              result = x * y;
+              console.log(result);
+              alert(result);
+            } else if (op == "/") {
+              result = x / y;
+              console.log(result);
+              alert(result);
+            } else if (op == "%") {
+              result = x % y;
+              console.log(result);
+              alert(result);
+            }
+          } else {
+            console.log("Error :(");
+            alert("Error :(");
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <input type="text" id="left" name="left" />
+    <select id="select">
+      <option>+</option>
+      <option>-</option>
+      <option>*</option>
+      <option>/</option>
+      <option>%</option>
+    </select>
+    <input type="text" id="right" name="right" />
+    <button id="button">Try me!</button>
+  </body>
+</html>

@@ -1,0 +1,9 @@
+body {
+  background-color: rgb(221, 214, 191);
+  text-align: center;
+}
+select {
+  border-collapse: collapse;
+  color: antiquewhite;
+  background-color: rgb(62, 58, 47);
+}
